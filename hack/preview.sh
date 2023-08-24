@@ -3,6 +3,8 @@ set -o pipefail
 
 ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"/..
 
+# test change
+
 # Print help message
 function print_help() {
   echo "Usage: $0 MODE [--toolchain] [--keycloak] [--obo] [-h|--help]"
