@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
 - allow-argocd-to-manage.yaml
 - host-config.yaml
-- https://github.com/redhat-appstudio/multi-arch-controller/deploy/operator?ref=f7cbdb56f91a3240b3b1967b357931eaf39eec2d
+- https://github.com/redhat-appstudio/multi-arch-controller/deploy/operator?ref=f3b86b2535d3594238f681a172e321ef13c7cee0
 
 images:
 - name: multi-arch-controller
