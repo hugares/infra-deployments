@@ -1,8 +1,8 @@
 resources:
 - allow-argocd-to-manage.yaml
-- https://github.com/redhat-appstudio/jvm-build-service/deploy/crds/base?ref=d78e4e0506374ba4669bd8bc2ce2e0215e187646
-- https://github.com/redhat-appstudio/jvm-build-service/deploy/operator/base?ref=d78e4e0506374ba4669bd8bc2ce2e0215e187646
-- https://github.com/redhat-appstudio/jvm-build-service/deploy/operator/config?ref=d78e4e0506374ba4669bd8bc2ce2e0215e187646
+- https://github.com/redhat-appstudio/jvm-build-service/deploy/crds/base?ref=24cb6d70fb02930126bb62eeb2f98d9abffd2581
+- https://github.com/redhat-appstudio/jvm-build-service/deploy/operator/base?ref=24cb6d70fb02930126bb62eeb2f98d9abffd2581
+- https://github.com/redhat-appstudio/jvm-build-service/deploy/operator/config?ref=24cb6d70fb02930126bb62eeb2f98d9abffd2581
 - monitoring.yaml
 - rbac
 
