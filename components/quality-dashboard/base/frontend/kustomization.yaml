@@ -1,5 +1,5 @@
 resources:
-- https://github.com/redhat-appstudio/quality-dashboard/frontend/deploy/base?ref=94b3615deafb26c2f943fa9d5f0ec2b6aabe0ec6
+- https://github.com/redhat-appstudio/quality-dashboard/frontend/deploy/base?ref=77684e215c3f3064302b85fc51383252908046a8
 
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
