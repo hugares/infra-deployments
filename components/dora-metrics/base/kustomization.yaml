@@ -1,5 +1,5 @@
 resources:
-- https://github.com/redhat-appstudio/dora-metrics/deploy/base?ref=dadd13a75d0fd0e4337fd90ddba3d3e47fb6199f
+- https://github.com/redhat-appstudio/dora-metrics/deploy/base?ref=2fe1c8f25c43812b98122c80b7c73a6e018fb0b3
 - ./rbac
 
 apiVersion: kustomize.config.k8s.io/v1beta1
