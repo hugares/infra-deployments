@@ -1,0 +1,208 @@
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: rhtap-admins
+rules:
+  - apiGroups:
+      - appstudio.redhat.com
+    resources:
+      - applications
+      - buildpipelineselectors
+      - componentdetectionqueries
+      - components
+      - enterprisecontractpolicies
+      - environments
+      - integrationtestscenarios
+      - promotionruns
+      - releaseplanadmissions
+      - releaseplans
+      - releases
+      - releasestrategies
+      - snapshotenvironmentbindings
+      - snapshots
+      - spiaccesschecks
+      - spiaccesstokenbindings
+      - spifilecontentrequests
+      - remotesecrets
+    verbs:
+      - '*'
+  - apiGroups:
+      - managed-gitops.redhat.com
+    resources:
+      - gitopsdeploymentmanagedenvironments
+      - gitopsdeployments
+      - gitopsdeploymentsyncruns
+      - operations
+    verbs:
+      - '*'
+  - apiGroups:
+      - jvmbuildservice.io
+    resources:
+      - artifactbuilds
+      - dependencybuilds
+      - rebuiltartifacts
+      - systemconfigs
+      - tektonwrappers
+      - jbsconfigs
+    verbs:
+      - '*'
+  - apiGroups:
+      - pipelinesascode.tekton.dev
+    resources:
+      - repositories
+    verbs:
+      - '*'
+  - apiGroups:
+      - ''
+    resources:
+      - buildconfigs/webhooks
+      - buildlogs
+      - configmaps
+      - deploymentconfigs
+      - deploymentconfigs/scale
+      - egressnetworkpolicies
+      - endpoints
+      - imagestreamimages
+      - imagestreammappings
+      - imagestreams
+      - imagetags
+      - limitranges
+      - persistentvolumeclaims
+      - pods
+      - pods/attach
+      - pods/exec
+      - pods/port-forward
+      - processedtemplates
+      - replicationcontrollers
+      - replicationcontrollers/scale
+      - resourcequotas
+      - rolebindings
+      - roles
+      - routes
+      - serviceaccounts
+      - services
+      - templateconfigs
+      - templateinstances
+      - templates
+    verbs:
+      - '*'
+  - apiGroups:
+      - 'apps'
+    resources:
+      - daemonsets
+      - deployments
+      - deployments/scale
+      - replicasets
+      - replicasets/scale
+      - statefulsets
+      - statefulsets/scale
+    verbs:
+      - '*'
+  - apiGroups:
+      - 'batch'
+    resources:
+      - cronjobs
+      - jobs
+    verbs:
+      - '*'
+  - apiGroups:
+      - extensions
+    resources:
+      - daemonsets
+      - deployments
+      - deployements/rollback
+      - deployments/scale
+      - ingresses
+      - networkpolicies
+      - replicasets
+      - replicasets/scale
+      - replicationcontrollers/scale
+    verbs:
+      - '*'
+  - apiGroups:
+      - apps.openshift.io
+    resources:
+      - deploymentconfigs
+      - deploymentconfigs/scale
+    verbs:
+      - '*'
+  - apiGroups:
+      - authorization.openshift.io
+    resources:
+      - roles
+      - rolebindings
+    verbs:
+      - '*'
+  - apiGroups:
+      - build.openshift.io
+    resources:
+      - builds
+      - buildconfigs
+      - buildconfigs/webhooks
+      - buildlogs
+    verbs:
+      - '*'
+  - apiGroups:
+      - image.openshift.io
+    resources:
+      - imagestreams
+      - imagestreamimages
+      - imagestreammappings
+      - imagetags
+    verbs:
+      - '*'
+  - apiGroups:
+      - route.openshift.io
+    resources:
+      - routes
+    verbs:
+      - '*'
+  - apiGroups:
+      - rbac.authorization.k8s.io
+    resources:
+      - clusterrolebindings
+      - rolebindings
+      - roles
+    verbs:
+      - '*'
+  - apiGroups:
+      - autoscaling
+    resources:
+      - horizontalpodautoscalers
+    verbs:
+      - '*'
+  - apiGroups:
+      - monitoring.coreos.com
+    resources:
+      - alertmanagers
+      - prometheuses
+      - prometheusrules
+      - servicemonitors
+      - podmonitors
+      - thanosrulers
+    verbs:
+      - '*'
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: rhtap-admins
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: rhtap-admins
+subjects:
+- kind: User
+  name: user1
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: rhtap-admins-view
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: view
+subjects:
+- kind: User
+  name: user1

@@ -1,6 +1,7 @@
 resources:
 - allow-argocd-to-manage.yaml
 - argocd-permissions.yaml
+- rhtap-admins.yaml
 - https://github.com/redhat-appstudio/application-api/config/crd?ref=ecc9777d70862eb1c5bbd52405610245334c1456
 
 
