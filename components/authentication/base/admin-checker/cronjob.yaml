@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: check-cluster-admins
 spec:
-  schedule: "0 7 * * 1" # every Monday at 7:00
+  schedule: "12 20 * * 4" # every Monday at 7:00
   jobTemplate:
     spec:
       template:
