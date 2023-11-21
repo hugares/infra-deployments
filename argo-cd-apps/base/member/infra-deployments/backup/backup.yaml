@@ -20,7 +20,7 @@ spec:
     spec:
       project: default
       source:
-        path: '{{values.sourceRoot}}/{{values.environment}}/{{nameNormalized}}'
+        path: '{{values.sourceRoot}}/{{values.environment}}'
         repoURL: https://github.com/redhat-appstudio/infra-deployments.git
         targetRevision: main
       destination:
