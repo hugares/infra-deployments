@@ -3,4 +3,6 @@ kind: Kustomization
 namespace: openshift-adp
 resources:
   - external-secret.yaml
+  - dpa.yaml
+  - install-oadp.yaml
   - namespace.yaml
