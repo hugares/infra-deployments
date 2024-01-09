@@ -1,0 +1,25 @@
+kind: ClusterRole
+apiVersion: authorization.openshift.io/v1
+metadata:
+  name: delete-snapshots
+rules:
+  - apiGroups:
+    - "appstudio.redhat.com"
+    resources:
+      - "snapshots"
+    verbs:
+      - "delete"
+      - "deletecollection"
+---
+kind: ClusterRoleBinding
+apiVersion: authorization.openshift.io/v1
+metadata:
+  name: delete-snapshots
+subjects:
+  - kind: Group
+    apiGroup: rbac.authorization.k8s.io
+    name: Integration Team
+roleRef:
+  apiGroup: authorization.openshift.io
+  kind: ClusterRole
+  name: delete-snapshots
