@@ -1,7 +1,9 @@
 apiVersion: machineconfiguration.openshift.io/v1
 kind: KubeletConfig
 metadata:
-  name: custom-kubelet
+  name: example
+  annotations:
+    argocd.argoproj.io/server-side-apply-manager: "argocd-kubelet-patch"
 spec:
   kubeletConfig:
     registryPullQPS: 10
